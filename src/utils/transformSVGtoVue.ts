@@ -4,11 +4,8 @@ import { readFile, writeFile } from 'node:fs/promises'
 import camelcase from 'camelcase'
 import fg from 'fast-glob'
 
-
 const workSpace = process.cwd() + '/src'
-
 const pattern = fg.convertPathToPattern(workSpace + '/assets' + '*_icon.svg')
-
 const stream = fg.stream(pattern)
 
 function getName(file: string) {
@@ -18,7 +15,6 @@ function getName(file: string) {
         fileName,
         componentName
     }
-
 }
 
 async function createComponent() {
