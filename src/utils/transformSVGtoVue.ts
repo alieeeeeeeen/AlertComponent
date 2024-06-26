@@ -32,7 +32,6 @@ async function createComponent() {
             })
             </script>,
         `
-
         writeFile(path.resolve(workSpace, '/components/icon', `${fileName}.vue`), vue, 'utf-8')
     }
 }
